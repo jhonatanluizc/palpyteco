@@ -1,6 +1,5 @@
 # Dataset
 import csv
-from multiprocessing.spawn import prepare
 import random
 import urllib.request as request
 
@@ -55,20 +54,18 @@ class Dataset():
         return json
     
 # NeuralNetwork
-from asyncio.windows_events import NULL
-from sklearn.datasets import load_wine
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.metrics import accuracy_score
 from api.controllers.dataset import Dataset
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 
 class NeuralNetwork():
 
-    neural_network = NULL
-    accuracy = NULL 
-    dataset = NULL
+    neural_network = None
+    accuracy = None 
+    dataset = None
     dataset_data = []
     dataset_target = []
 
