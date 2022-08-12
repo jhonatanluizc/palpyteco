@@ -1,17 +1,15 @@
-from asyncio.windows_events import NULL
-from sklearn.datasets import load_wine
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.metrics import accuracy_score
 from api.controllers.dataset import Dataset
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 
 class NeuralNetwork():
 
-    neural_network = NULL
-    accuracy = NULL 
-    dataset = NULL
+    neural_network = None
+    accuracy = None 
+    dataset = None
     dataset_data = []
     dataset_target = []
 
@@ -65,7 +63,8 @@ class NeuralNetwork():
 
         json = {
                 "latest_numbers": [data[94], data[95], data[96], data[97], data[98]],
-                "predict": response
+                "predict": response,
+                "accuracy": self.accuracy
             }
 
         return json

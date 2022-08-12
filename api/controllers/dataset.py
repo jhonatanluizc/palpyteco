@@ -1,5 +1,4 @@
 import csv
-from multiprocessing.spawn import prepare
 import random
 import urllib.request as request
 
