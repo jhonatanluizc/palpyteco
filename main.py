@@ -1,8 +1,8 @@
 from flask import Flask
-from api.controllers.neural import NeuralNetwork
+# from api.controllers.neural import NeuralNetwork
 
 app = Flask(__name__)
-neuralNetwork = NeuralNetwork()
+# neuralNetwork = NeuralNetwork()
 
 
 @app.route("/")
