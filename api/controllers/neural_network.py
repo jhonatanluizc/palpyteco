@@ -9,7 +9,7 @@ from api.controllers.dataset import Dataset
 class NeuralNetwork():
 
     neural_network = NULL
-    accuracy = NULL 
+    accuracy = 10 
     dataset = NULL
 
     def test_training(self):

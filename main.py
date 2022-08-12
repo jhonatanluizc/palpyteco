@@ -1,8 +1,8 @@
 from flask import Flask
-# from api.controllers.neural import NeuralNetwork
+from api.controllers.neural_network import NeuralNetwork
 
 app = Flask(__name__)
-# neuralNetwork = NeuralNetwork()
+neuralNetwork = NeuralNetwork()
 
 
 @app.route("/")
@@ -13,6 +13,10 @@ def hello_world():
 # def teste():
 #     from flask import render_template
 #     return render_template("hello.html")
+
+@app.route("/test")
+def teste():
+    return neuralNetwork.get_accuracy()
 
 # @app.get('/loaddataset')
 # def load_dataset():
