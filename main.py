@@ -1,6 +1,5 @@
 from flask import Flask
 from api.controllers.neural import NeuralNetwork
-from api.controllers.dataset import Dataset
 
 app = Flask(__name__)
 neuralNetwork = NeuralNetwork()

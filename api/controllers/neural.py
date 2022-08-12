@@ -6,7 +6,6 @@ from sklearn.metrics import confusion_matrix, accuracy_score
 from api.controllers.dataset import Dataset
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
-from datetime import date, datetime
 
 class NeuralNetwork():
 
