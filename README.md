@@ -22,14 +22,26 @@ pip install Flask
 ### Run the application
 ```
 flask --app main run
-```
-or
-```
 flask --app main --debug run --no-debugger --no-reload
+flask --app main --debug run --no-debugger --reload
+```
+
+## Upload Heroku
+### Include a Procfile that specifies the commands
+```
+web: gunicorn main:app
+```
+### Generate Requirements
+```
+python -m pip freeze > requirements.txt
 ```
 
 ### Dependencies
 ```
 python -m pip install requests
 python -m pip install -U scikit-learn
+python -m pip install gunicorn
+python -m pip install beautifulsoup4
+python -m pip install html5lib
+python -m pip install lxml
 ```

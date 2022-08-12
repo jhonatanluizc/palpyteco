@@ -1,8 +1,10 @@
 from flask import Flask
-from api.controllers.neural_network import NeuralNetwork
+from api.controllers.neural import NeuralNetwork
 from api.controllers.dataset import Dataset
 
 app = Flask(__name__)
+neuralNetwork = NeuralNetwork()
+
 
 @app.route("/")
 def hello_world():
@@ -13,11 +15,14 @@ def teste():
     from flask import render_template
     return render_template("hello.html")
 
-@app.get('/api')
-def teste_api():
-    return NeuralNetwork().test_training()
+@app.get('/loaddataset')
+def load_dataset():
+    return neuralNetwork.load_dataset()
 
-@app.get('/dataset')
-def get_dataset():
-    url = "https://drive.google.com/u/0/uc?id=1qbgfDLpn4FSy165Gcgg2r7iHnmSKtPFK&export=download"
-    return {"dataset": Dataset().get_dataset(url)}
+@app.get('/training')
+def training():
+    return neuralNetwork.training()
+
+@app.get('/predict')
+def predict():
+    return neuralNetwork.predict()
