@@ -125,7 +125,6 @@ class NeuralNetwork():
 
 # App controller
 from flask import Flask
-from api.controllers.neural_network import NeuralNetwork
 
 app = Flask(__name__)
 neuralNetwork = NeuralNetwork()
