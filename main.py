@@ -134,13 +134,9 @@ def hello_world():
     return "hello"
 
 @app.route("/hello")
-def teste():
+def hello():
     from flask import render_template
     return render_template("hello.html")
-
-@app.route("/test")
-def teste():
-    return neuralNetwork.get_accuracy()
 
 @app.get('/loaddataset')
 def load_dataset():
